@@ -13,10 +13,12 @@ class LogLevelFilter {
     static let shared = LogLevelFilter()
 
     var enabled: [LogLevel] {
-        return [error ? .error : nil,
+        return [
+            error ? .error : nil,
                 warning ? .warning : nil,
                 info ? .info : nil,
-                verbose ? .verbose : nil].flatMap {$0}
+                verbose ? .verbose : nil
+        ].compactMap { $0 }
     }
 
     var error: Bool {
