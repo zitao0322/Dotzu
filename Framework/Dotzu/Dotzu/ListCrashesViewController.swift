@@ -25,16 +25,18 @@ class ListCrashesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.trash,
-                                                            target: self,
-                                                            action: #selector(ListCrashesViewController.deleteCrashes))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: UIBarButtonItem.SystemItem.trash,
+            target: self,
+            action: #selector(ListCrashesViewController.deleteCrashes)
+        )
 
         LogViewNotification.countCrash = 0
 
         title = "Crash sessions"
         tableview.registerCellWithNib(cell: CrashListTableViewCell.self)
         tableview.estimatedRowHeight = 50
-        tableview.rowHeight = UITableViewAutomaticDimension
+        tableview.rowHeight = UITableView.automaticDimension
         tableview.delegate = self
         tableview.dataSource = datasource
         tableview.tableFooterView = UIView()
