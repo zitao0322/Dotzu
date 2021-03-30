@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/remirobert/Dotzu'
   s.social_media_url = 'https://twitter.com/remi936'
   s.authors = { 'Rémi ROBERT' => 'remirobert33530@gmail.com' }
-  s.source = { :git => 'https://github.com/zitao0322/Dotzu.git', :commit => '6548c00' }
+  s.source = { :git => 'https://github.com/zitao0322/Dotzu.git' }
   s.ios.deployment_target = '9.0'
   s.ios.frameworks = 'UIKit', 'Foundation'
   s.source_files = 'Dotzu/*.swift'
